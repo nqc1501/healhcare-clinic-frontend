@@ -1,0 +1,43 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2>Nguyen Quang Chi</h2>
+        </div>
+        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="shiba">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item routerLink="/admin">Dashboard</a>
+    <a mat-list-item (click)="toggleDoctorMenu()">
+        Doctor
+        <mat-icon style="margin-left: 100px;" *ngIf="!doctorMenuOpened">keyboard_arrow_right</mat-icon>
+        <mat-icon style="margin-left: 100px;" *ngIf="doctorMenuOpened">keyboard_arrow_down</mat-icon>
+    </a>
+    <mat-nav-list class="sidenav-item" *ngIf="doctorMenuOpened">
+        <a mat-list-item routerLink="/admin/create-doctor">
+            <mat-icon>add</mat-icon>
+            Thêm mới bác sỹ
+        </a>
+        <a mat-list-item routerLink="/admin/list-doctor">
+            <mat-icon>list</mat-icon>
+            Danh sách bác sỹ
+        </a>
+    </mat-nav-list>
+    <a mat-list-item (click)="togglePatientMenu()">
+        Patient
+        <mat-icon style="margin-left: 97px;" *ngIf="!patientMenuOpened">keyboard_arrow_right</mat-icon>
+        <mat-icon style="margin-left: 97px;" *ngIf="patientMenuOpened">keyboard_arrow_down</mat-icon>
+    </a>
+    <mat-nav-list class="sidenav-item" *ngIf="patientMenuOpened">
+        <a mat-list-item routerLink="/admin/create-patient">
+            <mat-icon>add</mat-icon>
+            Thêm mới bệnh nhân
+        </a>
+        <a mat-list-item routerLink="/admin/list-patient">
+            <mat-icon>list</mat-icon>
+            Danh sách bệnh nhân
+        </a>
+    </mat-nav-list>
+
+</mat-nav-list>
