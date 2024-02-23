@@ -19,7 +19,7 @@ export class StorageService {
       return false;
     }
 
-    if (this.getJwtFromCookie() == null) {
+    if (this.getJwtFromCookie() === null) {
       return false;
     }
 

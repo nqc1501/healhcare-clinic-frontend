@@ -29,7 +29,7 @@ import { AuthService } from '../../auth/services/auth/auth.service';
 })
 export class AdminComponent {
 
-  sideBarOpen = false;
+  sideBarOpen = true;
   loggedIn = false;
 
   constructor(
